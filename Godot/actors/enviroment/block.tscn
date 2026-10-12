@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://l0pcia353ud1"]
+
+[ext_resource type="Texture2D" uid="uid://bv2vdciuiih5i" path="res://art/enviroment/placeholder_block.png" id="1_cww8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elj7l"]
+size = Vector2(107, 101)
+
+[node name="Block" type="StaticBody2D" unique_id=1018788001]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1366218839]
+texture = ExtResource("1_cww8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=966493705]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_elj7l")

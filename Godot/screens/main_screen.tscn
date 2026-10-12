@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://4u7t7ycu2ktg"]
+
+[ext_resource type="PackedScene" uid="uid://cva4klkjjiutm" path="res://actors/entitys/player.tscn" id="1_mrqkd"]
+[ext_resource type="AudioStream" uid="uid://bd46cfcj7mrjt" path="res://sounds/music/blackhole_sample.ogg" id="1_vl7md"]
+[ext_resource type="PackedScene" uid="uid://l0pcia353ud1" path="res://actors/enviroment/block.tscn" id="2_6mwta"]
+[ext_resource type="PackedScene" uid="uid://kli5i1efsgll" path="res://actors/enviroment/test_damage_block.tscn" id="3_fqeqj"]
+
+[node name="main_screen" type="Node2D" unique_id=1393162876]
+
+[node name="Background Audio" type="AudioStreamPlayer" parent="." unique_id=126683917]
+stream = ExtResource("1_vl7md")
+autoplay = true
+
+[node name="Player" parent="." unique_id=235786668 instance=ExtResource("1_mrqkd")]
+unique_name_in_owner = true
+position = Vector2(400, 389)
+
+[node name="floor" parent="." unique_id=1395307726 instance=ExtResource("2_6mwta")]
+position = Vector2(745, 582)
+scale = Vector2(12.48, 1)
+
+[node name="test_damage_block" parent="." unique_id=351046689 instance=ExtResource("3_fqeqj")]
+position = Vector2(645, 480)

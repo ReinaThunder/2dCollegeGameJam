@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://kli5i1efsgll"]
+
+[ext_resource type="Texture2D" uid="uid://cpfhcs1hg1awj" path="res://art/enviroment/test_evil_block.png" id="1_jhh0j"]
+[ext_resource type="Script" uid="uid://cbc1coh8opwfg" path="res://actors/enviroment/test_damage_block.gd" id="1_nwmkf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q7ta"]
+size = Vector2(100, 99)
+
+[node name="test_damage_block" type="CharacterBody2D" unique_id=993037792]
+script = ExtResource("1_nwmkf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1051680883]
+texture = ExtResource("1_jhh0j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1619231346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1567560178]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8q7ta")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
