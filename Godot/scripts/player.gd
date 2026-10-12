@@ -5,6 +5,9 @@ var sprint_speed = 700
 var jump_power = 1500
 var dust_hp = 5
 
+func _ready():
+	Globals.player_reference = self
+
 func _physics_process(delta):
 	Globals.target_position = global_position
 	var direction = Input.get_axis("Left", "Right")

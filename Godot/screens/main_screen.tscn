@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cva4klkjjiutm" path="res://actors/entitys/player.tscn" id="1_mrqkd"]
 [ext_resource type="AudioStream" uid="uid://bd46cfcj7mrjt" path="res://sounds/music/blackhole_sample.ogg" id="1_vl7md"]
 [ext_resource type="PackedScene" uid="uid://l0pcia353ud1" path="res://actors/enviroment/block.tscn" id="2_6mwta"]
-[ext_resource type="PackedScene" uid="uid://kli5i1efsgll" path="res://actors/enviroment/test_damage_block.tscn" id="3_fqeqj"]
+[ext_resource type="PackedScene" uid="uid://kli5i1efsgll" path="res://actors/entitys/default_enemy.tscn" id="3_fqeqj"]
 
 [node name="main_screen" type="Node2D" unique_id=1393162876]
 

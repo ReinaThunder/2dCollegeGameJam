@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://kli5i1efsgll"]
+
+[ext_resource type="Texture2D" uid="uid://cpfhcs1hg1awj" path="res://art/enviroment/test_evil_block.png" id="1_jhh0j"]
+[ext_resource type="Script" uid="uid://cbc1coh8opwfg" path="res://scripts/default_enemy.gd" id="1_nwmkf"]
+[ext_resource type="Texture2D" uid="uid://317si42mtpt6" path="res://art/UI/placeholder_attack cone.png" id="3_h68fu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q7ta"]
+size = Vector2(100, 99)
+
+[node name="Default_enemy" type="CharacterBody2D" unique_id=993037792]
+script = ExtResource("1_nwmkf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1051680883]
+texture = ExtResource("1_jhh0j")
+
+[node name="Melee hitbox" type="Area2D" parent="." unique_id=1619231346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Melee hitbox" unique_id=1567560178]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8q7ta")
+disabled = true
+
+[node name="Special hitbox" type="Area2D" parent="." unique_id=451218187]
+position = Vector2(3, -1)
+scale = Vector2(2.9200013, 1)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Special hitbox" unique_id=743971262]
+shape = SubResource("RectangleShape2D_8q7ta")
+
+[node name="HitIconLeft" type="Sprite2D" parent="." unique_id=322747760]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-97, 0)
+scale = Vector2(0.20000023, 0.20000023)
+texture = ExtResource("3_h68fu")
+
+[node name="HitIconRight" type="Sprite2D" parent="." unique_id=144543494]
+unique_name_in_owner = true
+visible = false
+position = Vector2(99.999985, 0)
+scale = Vector2(0.20026802, 0.20026802)
+texture = ExtResource("3_h68fu")
+
+[node name="Attack_timer" type="Timer" parent="." unique_id=806137933]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
+[node name="waitattackTimer2" type="Timer" parent="." unique_id=259722493]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="IconVisbilityTimer" type="Timer" parent="." unique_id=422520123]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="body_entered" from="Melee hitbox" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Special hitbox" to="." method="_on_special_hitbox_body_entered"]
+[connection signal="body_exited" from="Special hitbox" to="." method="_on_special_hitbox_body_exited"]
+[connection signal="timeout" from="Attack_timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="waitattackTimer2" to="." method="attempt_damage"]
+[connection signal="timeout" from="IconVisbilityTimer" to="." method="_on_icon_visbility_timer_timeout"]
