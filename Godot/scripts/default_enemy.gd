@@ -16,7 +16,8 @@ func _physics_process(delta):
 	if $waitattackTimer2.time_left != 0 or $IconVisbilityTimer.time_left != 0:
 		return
 	elif not is_special_hitbox_activated: 
-		global_position.x = move_toward(global_position.x, Globals.target_position.x, delta * speed)
+		print(global_position.x)
+		global_position.x = move_toward(global_position.x, Globals.player_reference.global_position.x, delta * speed)
 	elif is_special_hitbox_activated and has_timer_timeouted:
 		if Globals.target_position.x < global_position.x:
 			%HitIconLeft.visible = true
@@ -40,10 +41,12 @@ func attempt_damage():
 	
 
 func _on_special_hitbox_body_entered(body: Node2D) -> void:
-	is_special_hitbox_activated = true
+	if body.is_in_group("Player"):
+		is_special_hitbox_activated = true
 
 func _on_special_hitbox_body_exited(body: Node2D) -> void:
-	is_special_hitbox_activated = false
+	if body.is_in_group("Player"):
+		is_special_hitbox_activated = false
 
 func _on_timer_timeout() -> void:
 	has_timer_timeouted = true

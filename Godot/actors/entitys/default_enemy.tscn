@@ -18,13 +18,13 @@ texture = ExtResource("1_jhh0j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Melee hitbox" unique_id=1567560178]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_8q7ta")
-disabled = true
 
 [node name="Special hitbox" type="Area2D" parent="." unique_id=451218187]
 position = Vector2(3, -1)
 scale = Vector2(2.9200013, 1)
 
 [node name="Hitbox" type="CollisionShape2D" parent="Special hitbox" unique_id=743971262]
+position = Vector2(-0.6849312, 0)
 shape = SubResource("RectangleShape2D_8q7ta")
 
 [node name="HitIconLeft" type="Sprite2D" parent="." unique_id=322747760]
