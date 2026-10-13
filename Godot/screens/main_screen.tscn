@@ -23,7 +23,7 @@ stream = ExtResource("1_vl7md")
 autoplay = true
 
 [node name="test_damage_block" parent="." unique_id=351046689 instance=ExtResource("3_fqeqj")]
-position = Vector2(667, 528)
+position = Vector2(933, 408)
 
 [node name="Player" parent="." unique_id=235786668 instance=ExtResource("1_mrqkd")]
 unique_name_in_owner = true

@@ -11,7 +11,6 @@ var is_player_on_right
 func _physics_process(delta):
 	#print(self_pos_check)
 	var direction = global_position.x - Globals.player_reference.global_position.x
-	print(direction)
 	if $waitattackTimer2.time_left != 0 or $IconVisbilityTimer.time_left != 0:
 		return
 	elif not is_special_hitbox_activated: 
@@ -20,13 +19,16 @@ func _physics_process(delta):
 		
 		if collided == false or direction > 0 and is_player_on_right == false or  direction < 0 and is_player_on_right == true:
 			global_position.x = move_toward(global_position.x, Globals.player_reference.global_position.x, delta * speed)
-
+		if not is_on_floor():
+			velocity.y += Globals.GRAVITY 
+		
 	elif is_special_hitbox_activated and has_timer_timeouted:
 		if Globals.target_position.x < global_position.x:
 			%HitIconLeft.visible = true
 		else:
 			%HitIconRight.visible = true
 		%waitattackTimer2.start(1)
+	move_and_slide()
 
 
 func attempt_damage():
