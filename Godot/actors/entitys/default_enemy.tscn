@@ -7,6 +7,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8q7ta"]
 size = Vector2(100, 99)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yha0"]
+size = Vector2(99.31503, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elj7l"]
+size = Vector2(98, 96)
+
 [node name="Default_enemy" type="CharacterBody2D" unique_id=993037792]
 script = ExtResource("1_nwmkf")
 
@@ -23,9 +29,9 @@ shape = SubResource("RectangleShape2D_8q7ta")
 position = Vector2(3, -1)
 scale = Vector2(2.9200013, 1)
 
-[node name="Hitbox" type="CollisionShape2D" parent="Special hitbox" unique_id=743971262]
-position = Vector2(-0.6849312, 0)
-shape = SubResource("RectangleShape2D_8q7ta")
+[node name="Hitbox" type="CollisionShape2D" parent="Special hitbox" unique_id=643089174]
+position = Vector2(-0.34246492, 3)
+shape = SubResource("RectangleShape2D_6yha0")
 
 [node name="HitIconLeft" type="Sprite2D" parent="." unique_id=322747760]
 unique_name_in_owner = true
@@ -54,7 +60,12 @@ one_shot = true
 unique_name_in_owner = true
 one_shot = true
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=362764191]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_elj7l")
+
 [connection signal="body_entered" from="Melee hitbox" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Melee hitbox" to="." method="_on_melee_hitbox_body_exited"]
 [connection signal="body_entered" from="Special hitbox" to="." method="_on_special_hitbox_body_entered"]
 [connection signal="body_exited" from="Special hitbox" to="." method="_on_special_hitbox_body_exited"]
 [connection signal="timeout" from="Attack_timer" to="." method="_on_timer_timeout"]

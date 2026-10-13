@@ -32,6 +32,7 @@ version_control/autoload_on_startup=true
 [global_group]
 
 Player="The player character the one who the player controls"
+Objects="Things that can get collided into, e.g. a wall this prevents the enemies from defying physics"
 
 [input]
 
