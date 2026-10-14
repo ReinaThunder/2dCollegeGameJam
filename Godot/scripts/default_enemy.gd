@@ -1,4 +1,5 @@
 extends CharacterBody2D
+# EVILTEST
 
 var speed = 100
 var is_special_hitbox_activated = false
