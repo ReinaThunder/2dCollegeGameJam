@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://4u7t7ycu2ktg"]
 
 [ext_resource type="PackedScene" uid="uid://cva4klkjjiutm" path="res://actors/entitys/player.tscn" id="1_mrqkd"]
+[ext_resource type="Script" uid="uid://da6ww2lio3bya" path="res://scripts/main_screen.gd" id="1_ofws5"]
 [ext_resource type="AudioStream" uid="uid://bd46cfcj7mrjt" path="res://sounds/music/blackhole_sample.ogg" id="1_vl7md"]
 [ext_resource type="PackedScene" uid="uid://kli5i1efsgll" path="res://actors/entitys/default_enemy.tscn" id="3_fqeqj"]
 [ext_resource type="Texture2D" uid="uid://bv2vdciuiih5i" path="res://art/enviroment/placeholder_block.png" id="5_ofws5"]
@@ -17,8 +18,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yqnpn")
 
 [node name="main_screen" type="Node2D" unique_id=1393162876]
+script = ExtResource("1_ofws5")
 
 [node name="Background Audio" type="AudioStreamPlayer" parent="." unique_id=126683917]
+unique_name_in_owner = true
 stream = ExtResource("1_vl7md")
 autoplay = true
 
