@@ -4,9 +4,9 @@ var speed = 100
 var is_special_hitbox_activated = false
 var has_timer_timeouted = false
 var collided = false
-var self_pos_check
 var direction: float
 var is_player_on_right
+var hp = 2
 
 func _physics_process(delta):
 	#print(self_pos_check)
@@ -14,9 +14,6 @@ func _physics_process(delta):
 	if $waitattackTimer2.time_left != 0 or $IconVisbilityTimer.time_left != 0:
 		return
 	elif not is_special_hitbox_activated: 
-		print(Globals.player_reference.global_position.x > 0 and self_pos_check == false)
-		print(self_pos_check == false or  Globals.player_reference.global_position.x < 0 and self_pos_check == true)
-		
 		if collided == false or direction > 0 and is_player_on_right == false or  direction < 0 and is_player_on_right == true:
 			global_position.x = move_toward(global_position.x, Globals.player_reference.global_position.x, delta * speed)
 		if not is_on_floor():
