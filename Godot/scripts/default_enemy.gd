@@ -10,7 +10,7 @@ var is_player_on_right
 
 func _physics_process(delta):
 	#print(self_pos_check)
-	var direction = global_position.x - Globals.player_reference.global_position.x
+	direction = global_position.x - Globals.player_reference.global_position.x
 	if $waitattackTimer2.time_left != 0 or $IconVisbilityTimer.time_left != 0:
 		return
 	elif not is_special_hitbox_activated: 

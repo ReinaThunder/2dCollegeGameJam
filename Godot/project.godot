@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2dCollegeGameJam"
-run/main_scene="uid://4u7t7ycu2ktg"
+run/main_scene="uid://bd2tmcs2b1wg0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://art/UI/icon.svg"
 

@@ -1,3 +1,44 @@
 [gd_scene format=3 uid="uid://bd2tmcs2b1wg0"]
 
+[ext_resource type="Script" uid="uid://d13bosysxio4l" path="res://scripts/title_screen.gd" id="1_81buc"]
+[ext_resource type="Texture2D" uid="uid://brkye1k3g8wlt" path="res://art/UI/main title possiblity.png" id="1_grftj"]
+
 [node name="Title Screen" type="Node2D" unique_id=1819846793]
+script = ExtResource("1_81buc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569424407]
+position = Vector2(573, 322)
+scale = Vector2(0.59722227, 0.5972222)
+texture = ExtResource("1_grftj")
+
+[node name="StartButton" type="MenuButton" parent="Sprite2D" unique_id=260096246]
+offset_left = -83.720924
+offset_top = 125.5814
+offset_right = 79.279076
+offset_bottom = 224.58139
+theme_override_font_sizes/font_size = 66
+text = "Start"
+
+[node name="MenuButton2" type="MenuButton" parent="Sprite2D" unique_id=689750558]
+offset_left = -123.90698
+offset_top = 271.2558
+offset_right = 140.09302
+offset_bottom = 370.2558
+theme_override_font_sizes/font_size = 66
+text = "Settings"
+
+[node name="MenuButton3" type="MenuButton" parent="Sprite2D" unique_id=34809263]
+offset_left = -137.3023
+offset_top = 410.23254
+offset_right = 126.69769
+offset_bottom = 509.23254
+theme_override_font_sizes/font_size = 66
+text = "Exit"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D" unique_id=894407462]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="Sprite2D/StartButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Sprite2D/MenuButton2" to="." method="_on_menu_button_2_pressed"]
+[connection signal="pressed" from="Sprite2D/MenuButton3" to="." method="_on_menu_button_3_pressed"]

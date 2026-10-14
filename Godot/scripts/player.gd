@@ -8,7 +8,7 @@ var dust_hp = 5
 func _ready():
 	Globals.player_reference = self
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	Globals.target_position = global_position
 	var direction = Input.get_axis("Left", "Right")
 	velocity.x = direction * speed 
@@ -32,4 +32,4 @@ func take_damage(damage_number):
 	
 func die():
 	print("dead")
-	get_tree().change_scene_to_file("res://screens/main_screen.tscn")
+	get_tree().change_scene_to_file("res://screens/title_screen.tscn")
