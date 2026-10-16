@@ -8,8 +8,8 @@
 script = ExtResource("1_81buc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1569424407]
-position = Vector2(573, 322)
-scale = Vector2(0.59722227, 0.5972222)
+position = Vector2(576.1111, 323.75)
+scale = Vector2(0.600463, 0.600463)
 texture = ExtResource("1_grftj")
 
 [node name="StartButton" type="MenuButton" parent="Sprite2D" unique_id=260096246]

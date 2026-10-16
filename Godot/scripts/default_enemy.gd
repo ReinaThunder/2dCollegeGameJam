@@ -41,6 +41,10 @@ func attempt_damage():
 	%Attack_timer.start(3)
 	has_timer_timeouted = false
 	
+func take_damage(damage):
+	hp -= damage
+	if hp <= 0:
+		queue_free()
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("in function")
