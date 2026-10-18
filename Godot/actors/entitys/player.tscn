@@ -98,7 +98,6 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 scale = Vector2(0.19743347, 0.19743347)
 sprite_frames = SubResource("SpriteFrames_8q7ta")
-flip_h = true
 
 [connection signal="body_entered" from="RightSimpleAttack" to="." method="_on_right_simple_attack_body_entered"]
 [connection signal="body_exited" from="RightSimpleAttack" to="." method="_on_right_simple_attack_body_exited"]

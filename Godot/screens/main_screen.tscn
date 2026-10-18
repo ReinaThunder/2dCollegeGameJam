@@ -39,3 +39,37 @@ position = Vector2(1174, 2516)
 
 [node name="Default_enemy2" parent="." unique_id=85443811 instance=ExtResource("5_yqnpn")]
 position = Vector2(2690, 2450)
+
+[node name="Default_enemy3" parent="." unique_id=788055340 instance=ExtResource("5_yqnpn")]
+position = Vector2(7596, 1655)
+
+[node name="Default_enemy4" parent="." unique_id=662973390 instance=ExtResource("5_yqnpn")]
+position = Vector2(10891, 3069)
+
+[node name="Default_enemy5" parent="." unique_id=1742910035 instance=ExtResource("5_yqnpn")]
+position = Vector2(7426, -1176)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1261060488]
+offset_left = 2420.0
+offset_top = 2185.0
+offset_right = 4571.0
+offset_bottom = 2654.0
+text = "Game is NOT finished ran outta time but level is blocked out and some fun enemies to fight so enjoy, WASD to move, Left click to attack, HAVE FUN!"
+
+[node name="Default_enemy6" parent="." unique_id=65200737 instance=ExtResource("5_yqnpn")]
+position = Vector2(6105, -2293)
+
+[node name="Default_enemy7" parent="." unique_id=1743115917 instance=ExtResource("5_yqnpn")]
+position = Vector2(5000, 2004)
+
+[node name="Default_enemy8" parent="." unique_id=15695432 instance=ExtResource("5_yqnpn")]
+position = Vector2(7425, 2645)
+
+[node name="Default_enemy9" parent="." unique_id=991451024 instance=ExtResource("5_yqnpn")]
+position = Vector2(10402, -21)
+
+[node name="Default_enemy10" parent="." unique_id=701868614 instance=ExtResource("5_yqnpn")]
+position = Vector2(8979, 9)
+
+[node name="Default_enemy11" parent="." unique_id=1631646183 instance=ExtResource("5_yqnpn")]
+position = Vector2(4483, -57)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c03ucuk78dv4t"]
+
+[ext_resource type="Texture2D" uid="uid://boi43wulwe3x3" path="res://art/enviroment/capsule trapped.png" id="1_dai1y"]
+
+[node name="Capsule" type="StaticBody2D" unique_id=714085021]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1516199595]
+scale = Vector2(0.19999942, 0.19999942)
+texture = ExtResource("1_dai1y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2120410241]
